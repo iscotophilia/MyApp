@@ -1,19 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.test.sazhijie.test.MainActivity">
-
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    tools:context="sazhijie.com.myapp.MainActivity">
 
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#f7f3f3">
+
+        <ProgressBar
+            android:id="@+id/pb_cir"
+            style="@android:style/Widget.Material.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/cv_txt"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/color_white"
+            android:layout_above="@id/btn_fgt"
+            app:cardElevation="3dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_usr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="10dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_usr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        app:errorEnabled="true"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="11">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_usr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/et_usr"
+                            android:inputType="phone"
+                            android:maxLength="20"
+                            android:textColorHint="@color/color_white" />
+                    </android.support.design.widget.TextInputLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_usr">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ti_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        app:errorEnabled="true"
+                        app:passwordToggleEnabled="true">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/et_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/et_pwd"
+                            android:inputType="textPassword"
+                            android:maxLength="20"
+                            android:textColorHint="@color/color_white" />
+                    </android.support.design.widget.TextInputLayout>
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btn_fgt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/cv_txt"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_fgt"
+            android:textColor="@color/color_lgn"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/btn_rgt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/cv_txt"
+            android:layout_below="@id/cv_txt"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_rgt"
+            android:textColor="@color/color_lgn" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_lgn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_fgt"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/btn_lgn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lgn"
+                android:background="@drawable/ripple_bg"
+                android:textColor="@color/color_white"/>
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="第三方登录"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/cv_lgn"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_toLeftOf="@id/tv_txt"
+            android:background="#999"
+            android:layout_below="@id/cv_lgn"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_toRightOf="@id/tv_txt"
+            android:background="#999"
+            android:layout_below="@id/cv_lgn"
+            android:layout_marginTop="40dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_txt"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_centerHorizontal="true">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cim_iv_img"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:src="@drawable/qq_logo"
+                android:background="?android:attr/selectableItemBackgroundBorderless"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cim_iv_weiboimg"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/weibo_logo"
+                android:background="?android:attr/selectableItemBackgroundBorderless"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="登录即代表同意"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

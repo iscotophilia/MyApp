@@ -3,8 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.test.sazhijie.test"
-        minSdkVersion 15
+        applicationId "sazhijie.com.myapp"
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -16,6 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
@@ -25,5 +26,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation files('libs/javax.mail.jar')
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    implementation files('libs/open_sdk_r5990_lite.jar')
+    implementation files('libs/commons-codec-1.4.jar')
+    implementation files('libs/commons-httpclient-3.1.jar')
+    implementation files('libs/commons-logging-1.1.1.jar')
+    implementation files('libs/fastjson-1.2.44.jar')
+    compile 'com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar'
 }

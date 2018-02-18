@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Test</string>
+    <string name="app_name">MyApp</string>
+    <string name="ti_usr_error">用户名只能为数字或字母</string>
+    <string name="et_usr">手机号</string>
+    <string name="et_pwd">密码</string>
+    <string name="btn_fgt">忘记密码?</string>
+    <string name="btn_rgt">新用户注册</string>
+    <string name="btn_lgn">登录</string>
+    <string name="rgt_usr">用户名</string>
+    <string name="rgt_snd">发送</string>
+    <string name="rgt_num">手机号</string>
+    <string name="rgt_dbepwd">确认密码</string>
+    <string name="rgt_rgt">注册</string>
+    <string name="rgt_cnm">验证码</string>
 </resources>
